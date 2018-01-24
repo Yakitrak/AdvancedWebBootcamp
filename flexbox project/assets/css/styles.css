@@ -78,7 +78,11 @@ section p {
     text-align: center;
 }
 
-@media (max-width: )
+@media (max-width: 800px) {
+     section {
+         padding: 50px  20px;
+     }
+}
 
 /*Header Styles*/
 
@@ -91,7 +95,8 @@ header {
     padding: 35px 100px 0;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
-    color: #fff;}
+    color: #fff;
+}
 
 @keyframes fadein  {
     100% {
@@ -110,6 +115,17 @@ header nav {
 
 header nav li {
     margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
 }
 
 /*Hero class*/
@@ -160,7 +176,24 @@ header nav li {
         opacity: 1;
         margin: 0;
     }
+}
 
+@media (max-width: 800px) {
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero a.btn {
+        padding: 15px 40px;
+    }
 }
 
 /*Destination Section*/
@@ -174,12 +207,35 @@ header nav li {
 }
 
 .destinations .grid li.small {
+    transition: all .35s ease-in-out;
     flex-basis: 30%;
 }
 
 .destinations .grid li.large {
+    transition: all .35s ease-in-out;
     flex-basis: 70%;
 }
+
+.destinations .grid li.small:hover, .destinations .grid li.large:hover  {
+    background-color: green;
+    opacity: 0.7;
+}
+
+@media (max-width: 1100px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+
 
 /*Packages Section*/
 
@@ -198,6 +254,13 @@ header nav li {
     margin: 25px;
 }
 
+@media (max-width: 800px) {
+    .packages .grid li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
 /*Testimonials Sections*/
 
 .testimonials .quote {
@@ -205,7 +268,17 @@ header nav li {
     font-weight: 300;
     line-height: 1.5;
     margin: 40px 0 25px;
+}
 
+@media (max-width: 800px) {
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .testimonials .author {
+        font-size: 14px;
+    }
 }
 
 /*Contacts Sections*/
@@ -228,6 +301,13 @@ header nav li {
     font-size: 18px;
     color: #555;
     flex: 1;
+}
+
+@media (max-width: 1000px) {
+    .contact form input {
+        flex-basis:100%;
+        margin: 0 0 20px 0;
+    }
 }
 
 /*Footer Section*/
@@ -254,4 +334,19 @@ footer p {
     font-size: 14px;
     opacity: 0.6;
     align-self: center;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer ul li {
+        margin: 0 8px;
+    }
 }
